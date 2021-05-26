@@ -112,8 +112,9 @@ def scoringReport():
     DF_Jordan_3['Day'] = DF_Jordan.Day
     DF_Jordan_3[Selec_Columns].plot(figsize=(20, 10))
     plt.savefig(AIRFLOW_HOME + '/dags/Jordan_scoring_report.png')
-    DF_Jordan_3.to_csv(AIRFLOW_HOME + 'Jordan_scoring_report.csv')
-    DF_Jordan_2.to_csv(AIRFLOW_HOME + 'Jordan_scoring_report_NotScaled.csv')
+    DF_Jordan_3.to_csv(AIRFLOW_HOME + '/dags/Jordan_scoring_report.csv')
+    DF_Jordan_2.to_csv(
+        AIRFLOW_HOME + '/dags/Jordan_scoring_report_NotScaled.csv')
 
 
 def SaveCsvToPostgres():
@@ -137,14 +138,14 @@ def SaveCsvToPostgres():
 
 default_args = {
     'owner': 'waed',
-    'start_date': dt.datetime(2020, 5, 15),
+    'start_date': dt.datetime(2020, 5, 26),
     'retries': 1,
     'retry_delay': dt.timedelta(minutes=1),
 }
 
 with DAG('covid19_cases_Jordan',
          default_args=default_args,
-         schedule_interval=timedelta(minutes=1),
+         schedule_interval='@daily',
          catchup=False,
          ) as dag:
     Get_All_Data = PythonOperator(task_id='Get_COVID19_Cases_For_Jordan_2020ToNow',
