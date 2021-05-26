@@ -1,0 +1,25 @@
+[2021-05-25 20:56:13,454] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:00:07.052122+00:00 [queued]>
+[2021-05-25 20:56:13,745] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:00:07.052122+00:00 [queued]>
+[2021-05-25 20:56:13,747] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-25 20:56:13,747] {taskinstance.py:1043} INFO - Starting attempt 2 of 2
+[2021-05-25 20:56:13,748] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-25 20:56:13,817] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): Get_COVID19_Cases_For_Jordan_2020ToNow> on 2021-05-25T20:00:07.052122+00:00
+[2021-05-25 20:56:13,906] {standard_task_runner.py:52} INFO - Started process 122 to run task
+[2021-05-25 20:56:14,007] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'covid19_cases_Jordan', 'Get_COVID19_Cases_For_Jordan_2020ToNow', '2021-05-25T20:00:07.052122+00:00', '--job-id', '100', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/workflow.py', '--cfg-path', '/tmp/tmp5mkzvp4x', '--error-file', '/tmp/tmpflea61r7']
+[2021-05-25 20:56:14,024] {standard_task_runner.py:77} INFO - Job 100: Subtask Get_COVID19_Cases_For_Jordan_2020ToNow
+[2021-05-25 20:56:14,411] {logging_mixin.py:104} INFO - Running <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:00:07.052122+00:00 [running]> on host 4e0af5d83701
+[2021-05-25 20:56:14,931] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=waed
+AIRFLOW_CTX_DAG_ID=covid19_cases_Jordan
+AIRFLOW_CTX_TASK_ID=Get_COVID19_Cases_For_Jordan_2020ToNow
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-25T20:00:07.052122+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-25T20:00:07.052122+00:00
+[2021-05-25 21:32:46,923] {logging_mixin.py:104} INFO - It took 36.53 minutes to get all data
+[2021-05-25 21:32:50,569] {python.py:118} INFO - Done. Returned value was: None
+[2021-05-25 21:32:50,631] {taskinstance.py:1166} INFO - Marking task as SUCCESS. dag_id=covid19_cases_Jordan, task_id=Get_COVID19_Cases_For_Jordan_2020ToNow, execution_date=20210525T200007, start_date=20210525T205613, end_date=20210525T213250
+[2021-05-25 21:32:50,893] {dagrun.py:497} WARNING - Failed to get task '<TaskInstance: covid19_cases_Jordan.Scoring_Report 2021-05-25 20:00:07.052122+00:00 [None]>' for dag 'covid19_cases_Jordan'. Marking it as removed.
+[2021-05-25 21:32:50,903] {dagrun.py:497} WARNING - Failed to get task '<TaskInstance: covid19_cases_Jordan.Save_Report_InPostgres 2021-05-25 20:00:07.052122+00:00 [None]>' for dag 'covid19_cases_Jordan'. Marking it as removed.
+[2021-05-25 21:32:50,919] {taskinstance.py:1220} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-05-25 21:32:51,004] {local_task_job.py:146} INFO - Task exited with return code 0

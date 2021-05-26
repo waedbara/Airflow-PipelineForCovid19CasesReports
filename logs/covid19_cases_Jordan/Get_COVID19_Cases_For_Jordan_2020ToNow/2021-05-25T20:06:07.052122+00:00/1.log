@@ -1,0 +1,21 @@
+[2021-05-25 20:26:02,368] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:06:07.052122+00:00 [queued]>
+[2021-05-25 20:26:03,451] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:06:07.052122+00:00 [queued]>
+[2021-05-25 20:26:03,453] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-25 20:26:03,453] {taskinstance.py:1043} INFO - Starting attempt 1 of 2
+[2021-05-25 20:26:03,454] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-25 20:26:04,048] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): Get_COVID19_Cases_For_Jordan_2020ToNow> on 2021-05-25T20:06:07.052122+00:00
+[2021-05-25 20:26:04,379] {standard_task_runner.py:52} INFO - Started process 973 to run task
+[2021-05-25 20:26:04,567] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'covid19_cases_Jordan', 'Get_COVID19_Cases_For_Jordan_2020ToNow', '2021-05-25T20:06:07.052122+00:00', '--job-id', '86', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/workflow.py', '--cfg-path', '/tmp/tmp_rir_46e', '--error-file', '/tmp/tmprbxo4q6y']
+[2021-05-25 20:26:04,770] {standard_task_runner.py:77} INFO - Job 86: Subtask Get_COVID19_Cases_For_Jordan_2020ToNow
+[2021-05-25 20:26:06,708] {logging_mixin.py:104} INFO - Running <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:06:07.052122+00:00 [running]> on host 4e0af5d83701
+[2021-05-25 20:26:07,272] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=waed
+AIRFLOW_CTX_DAG_ID=covid19_cases_Jordan
+AIRFLOW_CTX_TASK_ID=Get_COVID19_Cases_For_Jordan_2020ToNow
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-25T20:06:07.052122+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-25T20:06:07.052122+00:00
+[2021-05-25 20:52:40,419] {local_task_job.py:77} ERROR - Received SIGTERM. Terminating subprocesses
+[2021-05-25 20:52:40,508] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 973
+[2021-05-25 20:52:40,604] {taskinstance.py:1239} ERROR - Received SIGTERM. Terminating subprocesses.

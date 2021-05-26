@@ -1,0 +1,40 @@
+[2021-05-25 20:59:53,007] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:58:42.518800+00:00 [queued]>
+[2021-05-25 20:59:53,230] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:58:42.518800+00:00 [queued]>
+[2021-05-25 20:59:53,231] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-25 20:59:53,232] {taskinstance.py:1043} INFO - Starting attempt 1 of 2
+[2021-05-25 20:59:53,232] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-25 20:59:53,289] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): Get_COVID19_Cases_For_Jordan_2020ToNow> on 2021-05-25T20:58:42.518800+00:00
+[2021-05-25 20:59:53,322] {standard_task_runner.py:52} INFO - Started process 217 to run task
+[2021-05-25 20:59:53,353] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'covid19_cases_Jordan', 'Get_COVID19_Cases_For_Jordan_2020ToNow', '2021-05-25T20:58:42.518800+00:00', '--job-id', '115', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/workflow.py', '--cfg-path', '/tmp/tmpbmhp81nw', '--error-file', '/tmp/tmpyn67w56_']
+[2021-05-25 20:59:53,382] {standard_task_runner.py:77} INFO - Job 115: Subtask Get_COVID19_Cases_For_Jordan_2020ToNow
+[2021-05-25 20:59:53,757] {logging_mixin.py:104} INFO - Running <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan_2020ToNow 2021-05-25T20:58:42.518800+00:00 [running]> on host 4e0af5d83701
+[2021-05-25 20:59:53,981] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=waed
+AIRFLOW_CTX_DAG_ID=covid19_cases_Jordan
+AIRFLOW_CTX_TASK_ID=Get_COVID19_Cases_For_Jordan_2020ToNow
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-25T20:58:42.518800+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-25T20:58:42.518800+00:00
+[2021-05-25 21:21:45,908] {logging_mixin.py:104} INFO - It took 21.87 minutes to get all data
+[2021-05-25 21:21:45,909] {taskinstance.py:1455} ERROR - All objects passed were None
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 117, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 128, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/workflow.py", line 83, in Get_All_Data
+    DF_Jordan = pd.concat(DF_all).reset_index(drop=True)
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/reshape/concat.py", line 284, in concat
+    sort=sort,
+  File "/home/airflow/.local/lib/python3.6/site-packages/pandas/core/reshape/concat.py", line 349, in __init__
+    raise ValueError("All objects passed were None")
+ValueError: All objects passed were None
+[2021-05-25 21:21:45,915] {taskinstance.py:1503} INFO - Marking task as UP_FOR_RETRY. dag_id=covid19_cases_Jordan, task_id=Get_COVID19_Cases_For_Jordan_2020ToNow, execution_date=20210525T205842, start_date=20210525T205953, end_date=20210525T212145
+[2021-05-25 21:21:46,154] {local_task_job.py:146} INFO - Task exited with return code 1

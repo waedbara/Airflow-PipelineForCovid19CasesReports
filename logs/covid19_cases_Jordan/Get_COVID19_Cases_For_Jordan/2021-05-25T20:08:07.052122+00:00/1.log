@@ -1,0 +1,23 @@
+[2021-05-25 20:09:18,133] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan 2021-05-25T20:08:07.052122+00:00 [queued]>
+[2021-05-25 20:09:18,348] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan 2021-05-25T20:08:07.052122+00:00 [queued]>
+[2021-05-25 20:09:18,349] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-25 20:09:18,350] {taskinstance.py:1043} INFO - Starting attempt 1 of 2
+[2021-05-25 20:09:18,355] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2021-05-25 20:09:18,578] {taskinstance.py:1063} INFO - Executing <Task(PythonOperator): Get_COVID19_Cases_For_Jordan> on 2021-05-25T20:08:07.052122+00:00
+[2021-05-25 20:09:18,678] {standard_task_runner.py:52} INFO - Started process 872 to run task
+[2021-05-25 20:09:18,776] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'covid19_cases_Jordan', 'Get_COVID19_Cases_For_Jordan', '2021-05-25T20:08:07.052122+00:00', '--job-id', '82', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/workflow.py', '--cfg-path', '/tmp/tmp1rvbr3s9', '--error-file', '/tmp/tmp4druds8d']
+[2021-05-25 20:09:18,810] {standard_task_runner.py:77} INFO - Job 82: Subtask Get_COVID19_Cases_For_Jordan
+[2021-05-25 20:09:19,441] {logging_mixin.py:104} INFO - Running <TaskInstance: covid19_cases_Jordan.Get_COVID19_Cases_For_Jordan 2021-05-25T20:08:07.052122+00:00 [running]> on host 4e0af5d83701
+[2021-05-25 20:09:19,810] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=waed
+AIRFLOW_CTX_DAG_ID=covid19_cases_Jordan
+AIRFLOW_CTX_TASK_ID=Get_COVID19_Cases_For_Jordan
+AIRFLOW_CTX_EXECUTION_DATE=2021-05-25T20:08:07.052122+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-05-25T20:08:07.052122+00:00
+[2021-05-25 20:23:58,593] {local_task_job.py:188} WARNING - State of this instance has been externally set to removed. Terminating instance.
+[2021-05-25 20:23:58,617] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 872
+[2021-05-25 20:23:58,618] {taskinstance.py:1239} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-05-25 20:24:58,632] {process_utils.py:113} WARNING - process psutil.Process(pid=872, name='airflow task ru', status='sleeping', started='20:09:18') did not respond to SIGTERM. Trying SIGKILL
+[2021-05-25 20:24:59,225] {process_utils.py:66} INFO - Process psutil.Process(pid=872, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='20:09:18') (872) terminated with exit code Negsignal.SIGKILL
