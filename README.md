@@ -4,7 +4,7 @@
 
 # Jordan Scoring Report
 
-![alt text]("dags/Jordan_scoring_report.png")
+![alt text](dags/Jordan_scoring_report.png)
 
 # How to Run Project
 
