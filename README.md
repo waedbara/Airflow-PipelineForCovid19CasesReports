@@ -1,6 +1,6 @@
-# Building Airflow Pipeline to generate reports for Jordan from 2020 to now,
+# Building Airflow Pipeline to generate reports for Jordan from 2020 to now.
 
-# Data Source from COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University up to now.
+# Data Source:- COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University up to now.
 
 # Airflow Day
 
@@ -10,7 +10,7 @@
 
 ![alt Jordan Scoring Report](dags/Jordan_scoring_report.png)
 
-# Save Reports In Postgres database
+# Save Reports In Postgres Database
 
 ![alt Jordan Scoring Report](dags/JoReport.png)
 ![alt Jordan Scoring Report](dags/JoReportNotScaled.png)
@@ -20,6 +20,7 @@
 > mkdir dags logs plugins pgadmin postgres-db-volume
 
 > docker-compose up airflow-init
+
 > docker-compose up
 
 > pgAdmin : http://localhost:8000/
